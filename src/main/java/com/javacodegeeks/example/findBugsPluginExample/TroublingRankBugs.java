@@ -1,0 +1,33 @@
+package com.javacodegeeks.example.findBugsPluginExample;
+
+/**
+ * This code is from the following tutorial https://examples.javacodegeeks.com/core-java/findbugs-eclipse-example/
+ * which was used to demonstrate FindBugs in class
+ */
+
+
+/**
+ * Troubling Rank Bugs Sample.
+ */
+public class TroublingRankBugs {
+
+    /**
+     * Empty synchronized.
+     */
+    private void emptySynchronized() {
+        synchronized (this) {
+            // Forgot implementation
+        }
+    }
+
+    /**
+     * Sleep in synchronized.
+     *
+     * @throws InterruptedException the interrupted exception
+     */
+    private void sleepInSynchronized() throws InterruptedException {
+        synchronized (this) {
+            Thread.sleep(5000);
+        }
+    }
+}
