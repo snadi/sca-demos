@@ -45,3 +45,11 @@ Running the above command will create an xml output file called `demo-findbugs.x
 * The `pom.xml` file already has the SpotBugs dependency added
 
 * Run `mvn spotbugs:check`. It will show you the errors spotted and that you can visually look at the errors by running `mvn spotbugs:gui`
+
+## CogniCrypt
+
+* Download the precompiled version of CongniCrypt from their [repo](https://github.com/CROSSINGTUD/CryptoAnalysis), as well as the set of Crysl rules they have there
+
+* Run `java -cp ../CogniCrypt/CryptoAnalysis-1.0.0-jar-with-dependencies.jar crypto.HeadlessCryptoScanner --rulesDir=../CogniCrypt/JCA_rules/ --applicationCp=target/findbugs-1.0-SNAPSHOT.jar` from inside the main directory
+
+
