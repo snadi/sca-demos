@@ -1,9 +1,8 @@
 package ualberta.cmput402;
 
-import java.security.GeneralSecurityException;
-import java.security.KeyPair;
-import java.security.KeyPairGenerator;
-import java.security.SecureRandom;
+import javax.crypto.Cipher;
+import javax.crypto.NoSuchPaddingException;
+import java.security.*;
 import java.security.spec.RSAKeyGenParameterSpec;
 import java.util.Random;
 
@@ -26,6 +25,12 @@ public class SecurityBugs {
         byte[] seed = {1,3};
         generator.initialize(parameters, new SecureRandom(seed));
         return generator.generateKeyPair();
+    }
+
+
+    //example based on https://github.com/CROSSINGTUD/CryptoAnalysis/blob/master/CryptoAnalysisTargets/CogniCryptDemoExample/src/main/java/example/ConstraintErrorExample.java
+    public void foo() throws NoSuchAlgorithmException, NoSuchPaddingException {
+        Cipher instance = Cipher.getInstance("AES");
     }
 
 }
