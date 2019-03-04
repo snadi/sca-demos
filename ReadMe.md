@@ -33,3 +33,15 @@ Running the above command will create an xml output file called `demo-findbugs.x
 `mvn pmd:pmd`
 
 * In the target folder, you will find a `pmd.xml` file that contains the results of running PMD. You can also visualize those results by viewing the `target/site/pmd.html` file
+
+## Google ErrorProne Demo
+
+* To run ErrorProne, go to the `pom.xml` file and uncomment all parts mared by `for running google error prone`. 
+
+* Run `mvn clean compile` to force a compilation. You will notice that the build now fails. Google ErrorProne is integrated into the build process and causes it to fail upon detecting any error (based on its ruleset).
+
+## SpotBugs
+
+* The `pom.xml` file already has the SpotBugs dependency added
+
+* Run `mvn spotbugs:check`. It will show you the errors spotted and that you can visually look at the errors by running `mvn spotbugs:gui`
