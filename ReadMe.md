@@ -1,6 +1,6 @@
 # CMPUT 402 Static Analysis Tools Demo
 
-This sample code is used to demo different static verification tools such as FindBugs, PMD, Google ErrorProne, SpotBugs, CogniCrypt, and Coverity
+This sample code is used to demo different static verification tools such as FindBugs, PMD, Google ErrorProne, SpotBugs, CogniCrypt, and Coverity. 
 
 ## Getting Started
 
@@ -27,3 +27,9 @@ Some of the tools demonstrated here require a compiled jar file. To create the j
 Running the above command will create an xml output file called `demo-findbugs.xml`
 
 ## PMD Demo
+
+* The `pom.xml` file in this repo already has the pmd plugin as part of the reporting phase. To produce the pmd report, run:
+
+`mvn pmd:pmd`
+
+* In the target folder, you will find a `pmd.xml` file that contains the results of running PMD. You can also visualize those results by viewing the `target/site/pmd.html` file
