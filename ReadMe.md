@@ -20,4 +20,10 @@ Some of the tools demonstrated here require a compiled jar file. To create the j
 
 * Once you set up the project, you can view the different warnings in the GUI.
 
-* An alternative way for running FindBugs is through `ant`. There is already a `build.xml` file that configures the build for you so you can run FindBugs through the command line. 
+* An alternative way for running FindBugs is through `ant`. There is already a `build.xml` file that configures the build for you so you can run FindBugs through the command line. Please note that you may need to update the path to the FindBugs directory to wherever you unzipped the above archive to.
+
+`ant findbugs`
+
+Running the above command will create an xml output file called `demo-findbugs.xml`
+
+## PMD Demo
