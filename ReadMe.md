@@ -1,4 +1,4 @@
-# CMPUT 402/501 Static Analysis Tools Demo
+# CMPUT 402 Static Analysis Tools Demo
 
 This sample code is used to demo different static verification tools such as FindBugs, PMD, Google ErrorProne, SpotBugs, CogniCrypt, and Coverity. 
 
@@ -10,7 +10,7 @@ Some of the tools demonstrated here require a compiled jar file. To create the j
 
 ## FindBugs Demo
 
-* I downloaded the FindBugs jar file from this [link](http://prdownloads.sourceforge.net/findbugs/findbugs-3.0.1.zip?download). Note that there are alternative ways to run FindBugs. You can check them on their webpage. 
+* I downloaded the FindBugs jar file from this [link](http://prdownloads.sourceforge.net/findbugs/findbugs-3.0.1.zip?download). Note that there are alternative ways to run FindBugs (e.g., running it as an IntelliJ plugin). You can check them on their webpage. 
 
 * Run FindBugs on the current project (run the following command from the main directory of this project):
 
