@@ -37,5 +37,10 @@ public class OfConcernRankBugs {
         OfConcernRankBugs object = (OfConcernRankBugs) obj;
         return this.getPlaceHolder().equals(object.getPlaceHolder());
     }
+
+    private void test(){
+        Number[] arr = new Integer[10];
+        arr[0] = 1.0;
+    }
 }
 
