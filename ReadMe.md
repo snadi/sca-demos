@@ -10,7 +10,7 @@ Some of the tools demonstrated here require a compiled jar file. To create the j
 
 ## FindBugs Demo
 
-* I downloaded the FindBugs jar file from this [link](http://prdownloads.sourceforge.net/findbugs/findbugs-3.0.1.zip?download). Note that there are alternative ways to run FindBugs (e.g., running it as an IntelliJ plugin). You can check them on their webpage. 
+* I downloaded the FindBugs files from this [link](http://prdownloads.sourceforge.net/findbugs/findbugs-3.0.1.zip?download). Note that there are alternative ways to run FindBugs (e.g., running it as an Eclipse plugin or an [IntelliJ plugin](https://plugins.jetbrains.com/plugin/3847-findbugs-idea)). You can check them on their [webpage](http://findbugs.sourceforge.net/) or search for additional ways to integrate FindBugs in your workflow. 
 
 * Run FindBugs on the current project (run the following command from the main directory of this project):
 
