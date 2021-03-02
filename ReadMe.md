@@ -36,7 +36,7 @@ Running the above command will create an xml output file called `demo-findbugs.x
 
 ## Google ErrorProne Demo
 
-* To run ErrorProne, go to the `pom.xml` file and uncomment all parts mared by `for running google error prone`. 
+* To run ErrorProne, go to the `pom.xml` file and uncomment all parts marked by `for running google error prone`. 
 
 * Run `mvn clean compile` to force a compilation. You will notice that the build now fails. Google ErrorProne is integrated into the build process and causes it to fail upon detecting any error (based on its ruleset).
 
