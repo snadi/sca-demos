@@ -10,13 +10,16 @@ Some of the tools demonstrated here require a compiled jar file. To create the j
 
 ## FindBugs Demo
 
-* I downloaded the FindBugs files from this [link](http://prdownloads.sourceforge.net/findbugs/findbugs-3.0.1.zip?download). Note that there are alternative ways to run FindBugs (e.g., running it as an Eclipse plugin or an [IntelliJ plugin](https://plugins.jetbrains.com/plugin/3847-findbugs-idea)). You can check them on their [webpage](http://findbugs.sourceforge.net/) or search for additional ways to integrate FindBugs in your workflow. 
+* I downloaded the FindBugs 3.0.1 files from this [link](http://prdownloads.sourceforge.net/findbugs/findbugs-3.0.1.zip?download). Note that there are alternative ways to run FindBugs (e.g., running it as an Eclipse plugin or an [IntelliJ plugin](https://plugins.jetbrains.com/plugin/3847-findbugs-idea)). You can check them on their [webpage](http://findbugs.sourceforge.net/) or search for additional ways to integrate FindBugs in your workflow. 
 
-* Run FindBugs on the current project (run the following command from any directory but point to the right FindBugs jar file under the `lib` folder in the downloaded files):
+* Run FindBugs on the current project (run the following command from any directory but point to the right FindBugs jar file in the `lib` folder of the zip file you downloaded for FindBugs):
 
 `java -jar <path to FindBugs jar file>`
 
-* The above command will open a GUI. You can follow the GUI instructions [here](http://findbugs.sourceforge.net/manual/gui.html) to see how to use set up a new project. Note that for the source directory, you need to select the `src/main/java` directory of this current project.
+E.g., for me, I just saved to downloads folder and ran as:
+`java -jar ~/Downloads/findbugs-3.0.1/lib/findbugs.jar`
+
+* The above command will open a GUI. You can follow the GUI instructions [here](http://findbugs.sourceforge.net/manual/gui.html) to see how to set up a new project. Note that for the source directory, you need to select the `src/main/java` directory of this current project.
 
 * Once you set up the project, you can view the different warnings in the GUI.
 
@@ -48,8 +51,8 @@ Running the above command will create an xml output file called `demo-findbugs.x
 
 ## CogniCrypt
 
-* Download the precompiled version of CongniCrypt from their [repo](https://github.com/CROSSINGTUD/CryptoAnalysis), as well as the set of Crysl rules they have there
+* Download the precompiled version of CongniCrypt from their [repo](https://github.com/CROSSINGTUD/CryptoAnalysis), as well as the set of Crysl rules they have there. I used version [2.7.1](https://github.com/CROSSINGTUD/CryptoAnalysis/releases/tag/2.7.1). I created a folder `CogniCrypt` and inside it placed the pre-compiled CogniCrypt jar file and unzipped the `crypto-api-rules.zip` file into a folder called rules with all the `.crsyl` rules inside it.
 
-* Run `java -cp ../CogniCrypt/CryptoAnalysis-1.0.0-jar-with-dependencies.jar crypto.HeadlessCryptoScanner --rulesDir=../CogniCrypt/JCA_rules/ --applicationCp=target/findbugs-1.0-SNAPSHOT.jar` from inside the main directory
+* Run `java -jar ../CogniCrypt/CryptoAnalysis-2.7.1-SNAPSHOT-jar-with-dependencies.jar --rulesDir=../CogniCrypt/rules/ --applicationCp=target/sca-demo-1.0-SNAPSHOT.jar` from inside this project's main directory
 
 
