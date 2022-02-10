@@ -1,6 +1,6 @@
 # CMPUT 402/501 Static Analysis Tools Demo
 
-This sample code is used to demo different static verification tools such as FindBugs, PMD, Google ErrorProne, SpotBugs, CogniCrypt, and Coverity. 
+This sample code is used to demo different static verification tools such as FindBugs, PMD, Google ErrorProne, SpotBugs, and CogniCrypt. 
 
 ## Getting Started
 
