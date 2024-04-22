@@ -28,13 +28,15 @@ You can play around with the commented configuration options in the spotbugs dep
 
 ## Google ErrorProne Demo
 
-* To run ErrorProne, go to the `pom.xml` file and uncomment all parts marked by `for running google error prone`. 
+* To run ErrorProne, go to the `pom.xml` file and uncomment the part under `Uncomment to run ErrorProne`. Note that errorprone needs the file `.mvn/jvm.config` to run. This file is already in the repo so no need to change anything for it.
 
-* Run `mvn clean compile` to force a compilation. You will notice that the build now fails. Google ErrorProne is integrated into the build process and causes it to fail upon detecting any error (based on its ruleset). See [website](https://github.com/google/error-prone) for how to run it using different build systems.
+* Run `mvn clean compile` to force a compilation. You will notice that the build now fails. Google ErrorProne is integrated into the build process and causes it to fail upon detecting certain errors (based on its ruleset). See [website](https://github.com/google/error-prone) for how to run it using different build systems.
 
 
 
 ## CogniCrypt
+
+Note: last checked 2021
 
 * Download the precompiled version of CongniCrypt from their [repo](https://github.com/CROSSINGTUD/CryptoAnalysis), as well as the set of Crysl rules they have there. I used version [2.7.1](https://github.com/CROSSINGTUD/CryptoAnalysis/releases/tag/2.7.1). I created a folder `CogniCrypt` and inside it placed the pre-compiled CogniCrypt jar file and unzipped the `crypto-api-rules.zip` file into a folder called rules with all the `.crsyl` rules inside it.
 
