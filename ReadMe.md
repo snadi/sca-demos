@@ -1,33 +1,20 @@
-# CMPUT 402/501 Static Analysis Tools Demo
+# CS-UH-3260 Static Analysis Tools Demo
 
-This sample code is used to demo different static verification tools such as FindBugs, PMD, Google ErrorProne, SpotBugs, and CogniCrypt. 
+This sample code is used to demo different static verification tools such as SpotBugs, PMD, and Google ErrorProne. This repo has been forked and udpated from the same material originally prepared by Sarah Nadi for CMPUT 402/501 at the University of Alberta.
 
 ## Getting Started
 
 Some of the tools demonstrated here require a compiled jar file. To create the jar file for this sample project, run
 
-`mvn clean package assembly:single`
+```
+mvn clean package assembly:single
+```
 
-## FindBugs Demo
+## SpotBugs Demo
 
-* I downloaded the FindBugs 3.0.1 files from this [link](http://prdownloads.sourceforge.net/findbugs/findbugs-3.0.1.zip?download). Note that there are alternative ways to run FindBugs (e.g., running it as an Eclipse plugin or an [IntelliJ plugin](https://plugins.jetbrains.com/plugin/3847-findbugs-idea)). You can check them on their [webpage](http://findbugs.sourceforge.net/) or search for additional ways to integrate FindBugs in your workflow. 
+* The `pom.xml` file already has the SpotBugs dependency added
 
-* Run FindBugs on the current project (run the following command from any directory but point to the right FindBugs jar file in the `lib` folder of the zip file you downloaded for FindBugs):
-
-`java -jar <path to FindBugs jar file>`
-
-E.g., for me, I just saved to downloads folder and ran as:
-`java -jar ~/Downloads/findbugs-3.0.1/lib/findbugs.jar`
-
-* The above command will open a GUI. You can follow the GUI instructions [here](http://findbugs.sourceforge.net/manual/gui.html) to see how to set up a new project. Note that for the source directory, you need to select the `src/main/java` directory of this current project.
-
-* Once you set up the project, you can view the different warnings in the GUI.
-
-* An alternative way for running FindBugs is through `ant`. There is already a `build.xml` file that configures the build for you so you can run FindBugs through the command line. Please note that you may need to update the path to the FindBugs directory to wherever you unzipped the above archive to.
-
-`ant findbugs`
-
-Running the above command will create an xml output file called `demo-findbugs.xml`
+* Run `mvn spotbugs:check`. It will show you the errors spotted and that you can visually look at the errors by running `mvn spotbugs:gui`
 
 ## PMD Demo
 
@@ -43,11 +30,7 @@ Running the above command will create an xml output file called `demo-findbugs.x
 
 * Run `mvn clean compile` to force a compilation. You will notice that the build now fails. Google ErrorProne is integrated into the build process and causes it to fail upon detecting any error (based on its ruleset). See [website](https://github.com/google/error-prone) for how to run it using different build systems.
 
-## SpotBugs
 
-* The `pom.xml` file already has the SpotBugs dependency added
-
-* Run `mvn spotbugs:check`. It will show you the errors spotted and that you can visually look at the errors by running `mvn spotbugs:gui`
 
 ## CogniCrypt
 
