@@ -14,7 +14,9 @@ mvn clean package assembly:single
 
 * The `pom.xml` file already has the SpotBugs dependency added
 
-* Run `mvn spotbugs:check`. It will show you the errors spotted and that you can visually look at the errors by running `mvn spotbugs:gui`
+* Run `mvn spotbugs:check`. It will show you the errors spotted and that you can visually look at the errors by running `mvn spotbugs:gui`. Note that this is the GUI originally developed for SpotBug's predecessor, FindBugs.
+
+You can play around with the commented configuration options in the spotbugs dependency in the pom.xml file to see their effect.
 
 ## PMD Demo
 
